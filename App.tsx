@@ -1,17 +1,17 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Loading from './Loading';
-import SignUp from './SignUp';
-import Login from './Login';
-import Main from './Main';
+import {Loading} from './Screen/Loading';
+import SignUp from './Screen/SignUp';
+import SignIn from './Screen/SignIn';
+import {Main} from './Screen/Main';
 
 const Stack = createStackNavigator();
 
 const AuthScreen = (): React.ReactElement => {
   return (
-    <Stack.Navigator initialRouteName='Login' >
-        <Stack.Screen name='Login' component={Login} />
+    <Stack.Navigator initialRouteName='SignIn' >
+        <Stack.Screen name='SignIn' component={SignIn} />
         <Stack.Screen name='SignUp' component={SignUp} />
     </Stack.Navigator>
   )
@@ -29,4 +29,4 @@ const App = (): React.ReactElement => {
   )
 }
 
-export default App; 
+export default App
