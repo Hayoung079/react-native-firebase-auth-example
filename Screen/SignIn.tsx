@@ -7,12 +7,11 @@ const SignIn = ({ navigation }: any ): React.ReactElement => {
     const [ password, setPassword ] = useState('');
     const [ errorMessage, setErrorMessage ] = useState('');
 
-    // form
     const handleLogin = () => {
         auth().signInWithEmailAndPassword(email, password)
         .then((result) => {
             console.log(`로그인 결과: ${result}`)
-            // navigation.navigate('Main')
+            navigation.navigate('Main')
         })
         .catch(error => setErrorMessage(error.message))
     }
